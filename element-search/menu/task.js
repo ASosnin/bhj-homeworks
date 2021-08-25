@@ -6,6 +6,10 @@ const ready = () => {
     for (let subMenu of subMenus) {
       const link = subMenu.closest(".menu__item").querySelector(".menu__link");
       link.onclick = () => {
+        if (subMenu.classList.contains("menu_active")) {
+          subMenu.classList.remove("menu_active");
+          return false;
+        }
         const activeMenuItem = menu.querySelector(".menu_active");
         if (activeMenuItem) {
           activeMenuItem.classList.remove("menu_active");
