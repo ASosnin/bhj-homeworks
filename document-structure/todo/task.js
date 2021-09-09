@@ -32,6 +32,10 @@ const ready = () => {
   };
 
   ButtonTaskAdd.onclick = onAddTask;
+
+  document.getElementById("tasks__form").onsubmit = (event) => {
+    event.preventDefault();
+  };
 };
 
 document.addEventListener("DOMContentLoaded", ready);
