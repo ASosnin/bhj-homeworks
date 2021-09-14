@@ -8,3 +8,7 @@ textarea {
   border: 1px solid #e2e2e2;
   box-sizing: border-box;
 }
+
+.card__button:focus {
+  border: 2px solid black;
+}
